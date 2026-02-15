@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Server Addition</title>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    <form id="additionForm">
+        <label for="num1">Number 1:</label>
+        <input type="text" id="num1" name="num1" required>
+        <br><br>
+        <label for="num2">Number 2:</label>
+        <input type="text" id="num2" name="num2" required>
+        <br><br>
+        <button type="submit">Add</button>
+    </form>
+    <h2>Result: <span id="result">N/A</span></h2>
+
+    <script>
+        const form = document.getElementById('additionForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            const formData = new FormData(form);
+            const data = {
+                num1: formData.get('num1'),
+                num2: formData.get('num2')
+            };
+
+            try {
+                const response = await fetch('/add-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(data)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('result').textContent = result.result;
+                } else {
+                    const errorText = await response.text();
+                    document.getElementById('result').textContent = `Error: ${errorText}`;
+                }
+            } catch (error) {
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
