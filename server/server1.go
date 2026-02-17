@@ -9,7 +9,7 @@ import (
 	"strconv"
 )
 
-func main(){
+func main1(){
 
 	fs := http.FileServer(http.Dir("./static"));
 	http.Handle("/math-form/", http.StripPrefix("/math-form/", fs));
