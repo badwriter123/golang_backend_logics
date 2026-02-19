@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+// import "fmt"
 
-func Hello() {
-	fmt.Println("Hello world")
+func main() {
+	// fmt.Println("Hello world")
+	// variablesss();
+	variables1();
+	variable2();
 }
