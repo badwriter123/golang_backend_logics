@@ -4,5 +4,7 @@ package main
 
 
 func main() {
-	variables1();
+	// variables1();
+	// arith();
+	conv();
 }
