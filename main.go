@@ -6,5 +6,6 @@ package main
 func main() {
 	// variables1();
 	// arith();
-	conv();
+	// conv();
+	conditions();
 }
