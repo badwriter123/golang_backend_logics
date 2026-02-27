@@ -16,7 +16,4 @@ func conditions(){
 	z := x < uint(y)
 	fmt.Println(z)
 
-
-	
-
 }
