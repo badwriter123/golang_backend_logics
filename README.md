@@ -12,4 +12,5 @@
 <h3>Questions and Solutions will be pushed Daily.</h3>
 <h4>1. Feb 14 2026 -> Initial commit to this repo with basic Hello World file</h4>
 <h4>2. Feb 15 2026 -> Sample Golang server present in server1.go -> server folder. Contains an HTML form to do basic addition and how it runs is handled by server1.go, /math-form/ route. Will drop simple code next time. Will start with the basic.</h4>
+<h4>3. Mar 11 2026 -> Sample golang server present in example_server1.go . Contains simple server written to show users the functionality of golang servers and handlers. Thank you.
 <h1>Thank You for Droppin by... ❤️ Rohan A M...</h1>
