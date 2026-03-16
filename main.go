@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	// "fmt"
+	// "net/http"
 )
 
 // import "fmt"
@@ -14,12 +14,14 @@ func main() {
 	// conv();
 	// conditions();
 	// logics();
-	http.HandleFunc("/", homeHandler);
-	http.HandleFunc("/home",homeHandler);
-	http.HandleFunc("/about", aboutHandler);
-	http.HandleFunc("/api/users", userHandler);
+	// http.HandleFunc("/", homeHandler);
+	// http.HandleFunc("/home",homeHandler);
+	// http.HandleFunc("/about", aboutHandler);
+	// http.HandleFunc("/api/users", userHandler);
 
-	fmt.Println("Server running @ port 3000 on http://localhost:3000")
-	http.ListenAndServe(":3000", nil)
+	// fmt.Println("Server running @ port 3000 on http://localhost:3000")
+	// http.ListenAndServe(":3000", nil)
+
+	arr();
 
 }
